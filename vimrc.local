@@ -1,0 +1,38 @@
+set relativenumber
+let &t_Co=256
+syntax enable
+"set background=light
+set background=dark
+colorscheme solarized
+let g:lightline = {'colorscheme': 'solarized'}
+let g:rspec_command='call Send_to_Tmux("rspec {spec}\n")'
+let g:mustache_abbreviations=1
+
+" automatically rebalance windows on vim resize
+autocmd VimResized * :wincmd =
+
+" zoom a vim pane, <C-w>= to re-balance
+nnoremap <leader>- :wincmd _<cr>:wincmd \|<cr>
+nnoremap <leader>= :wincmd =<cr>
+
+" key mappings Vim Tmux Runner
+nnoremap <leader>irb :VtrOpenRunner {'orientation': 'h', 'percentage': 50, 'cmd': 'irb'}<cr>
+
+let g:rspec_command = 'call Send_to_Tmux("spring rspec {spec}\n")'
+
+"labs (upgrade them to full usage or delete them if don't seem useful)
+nmap <Leader>si :source ~/.vimrc<cr>:PluginInstall<cr>
+nmap <Leader>s :w<cr>:source ~/.vimrc<cr>
+map <Leader>co ggVG"*y
+map <Leader>d orequire 'pry'<cr>binding.pry<esc>:w<cr>
+map <Leader>i mmgg=G`m<CR>
+map <Leader>l oconsole.log 'debugging'<esc>:w<cr>
+map <Leader>m :Rmodel
+map <Leader>p :set paste<CR>o<esc>"*]p:set nopaste<cr>
+map <Leader>ra :%s/
+map <Leader>rd :!bundle exec rspec % --format documentation<CR>
+map <Leader>rs :vsp <C-r>#<cr><C-w>w
+map <Leader>sp yss<p>
+map <Leader>so :so %<cr>
+map <C-h> :nohl<cr>
+map <C-t> <esc>:tabnew<CR>

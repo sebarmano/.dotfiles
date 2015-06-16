@@ -1,0 +1,7 @@
+Plugin 'mustache/vim-mustache-handlebars'
+Plugin 'mattn/emmet-vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'whatyouhide/vim-gotham'
+Plugin 'itchyny/lightline.vim'
+Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'christoomey/vim-tmux-runner'

@@ -1,0 +1,6 @@
+export EDITOR='vim'
+cdpath=(. ~/ ~/Projects/)
+plugins=(zsh-syntax-highlighting)
+
+export PATH="$HOME/.bin:$PATH"
+eval "$(rbenv init - --no-rehash zsh)"
